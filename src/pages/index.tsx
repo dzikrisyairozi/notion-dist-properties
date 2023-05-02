@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
@@ -19,6 +20,14 @@ import Vercel from '~/svg/Vercel.svg';
 // to customize the default configuration.
 
 export default function HomePage() {
+  const router = useRouter();
+
+  React.useEffect(() => {
+    router.push(
+      'https://eastern-power-432.notion.site/418f5d8a0be449798f313ab458357e93?v=4ff5291447c64812ad1aeaa825691c1c'
+    );
+  });
+
   return (
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
